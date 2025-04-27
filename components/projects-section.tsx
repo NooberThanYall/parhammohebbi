@@ -10,21 +10,21 @@ const projects = [
     title: "FullStack Todo App – Auth & API",
     description:
       "Todo App with Authentication (JWT) That Stores The Tasks And User Settings To The Database. You can Also Create Routines so You dont have to Overwrite Your Tasks Each Day.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/Screenshot (98).png",
     tags: ["Next.js", "React", "Node.js", "MongoDB"],
   },
   {
     id: 2,
     title: "Full Stack Ecommerce & Blog",
     description: "An Ecommerce with a blog, having an admin panel as a CMS to control the content of the website",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/Screenshot (185).png",
     tags: ["Next.js", "React", "Node.js", "PostgreSQL"],
   },
   {
     id: 3,
     title: "Backend Of GiahLand",
     description: "A robust backend system for managing plant inventory and sales",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/Screenshot (121).png",
     tags: ["Node.js", "Express", "MongoDB", "Docker"],
   },
 ]
