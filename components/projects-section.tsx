@@ -1,10 +1,18 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
+  {
+    id: 3,
+    title: "Coding Tool with Ai Integration",
+    description:
+      "A SaaS tool for developers to manage and product their programs up to 3x faster with Snippet Management and Ai debugging",
+    image: "/images/image.png",
+    tags: ["Node.js", "Express", "MongoDB", "NextJS"],
+  },
   {
     id: 1,
     title: "FullStack Todo App – Auth & API",
@@ -16,22 +24,16 @@ const projects = [
   {
     id: 2,
     title: "Full Stack Ecommerce & Blog",
-    description: "An Ecommerce with a blog, having an admin panel as a CMS to control the content of the website",
+    description:
+      "An Ecommerce with a blog, having an admin panel as a CMS to control the content of the website",
     image: "/images/Screenshot (185).png",
     tags: ["Next.js", "React", "Node.js", "PostgreSQL"],
   },
-  {
-    id: 3,
-    title: "Backend Of GiahLand",
-    description: "A robust backend system for managing plant inventory and sales",
-    image: "/Screenshot (121).png",
-    tags: ["Node.js", "Express", "MongoDB", "Docker"],
-  },
-]
+];
 
 export default function ProjectsSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.1 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,7 +44,7 @@ export default function ProjectsSection() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -51,7 +53,7 @@ export default function ProjectsSection() {
       y: 0,
       transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] },
     },
-  }
+  };
 
   const projectVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -63,12 +65,19 @@ export default function ProjectsSection() {
         ease: [0.215, 0.61, 0.355, 1],
       },
     },
-  }
+  };
 
   return (
     <section id="works" ref={ref} className="py-20">
-      <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
-        <motion.h2 variants={titleVariants} className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <motion.h2
+          variants={titleVariants}
+          className="text-4xl md:text-5xl font-bold mb-16 text-center gradient-text"
+        >
           My Creations
         </motion.h2>
 
@@ -78,13 +87,19 @@ export default function ProjectsSection() {
               key={project.id}
               variants={projectVariants}
               className={`grid grid-cols-1 ${
-                index % 2 === 0 ? "lg:grid-cols-[1fr,1.2fr]" : "lg:grid-cols-[1.2fr,1fr]"
+                index % 2 === 0
+                  ? "lg:grid-cols-[1fr,1.2fr]"
+                  : "lg:grid-cols-[1.2fr,1fr]"
               } gap-8 items-center`}
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, scale: 1 }
+                      : { opacity: 0, scale: 0.9 }
+                  }
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className="project-card rounded-lg overflow-hidden relative group"
                   whileHover={{
@@ -117,7 +132,11 @@ export default function ProjectsSection() {
               <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                 <motion.h3
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, x: 0 }
+                      : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
+                  }
                   transition={{ duration: 0.8, delay: index * 0.2 + 0.2 }}
                   className="text-3xl md:text-4xl font-bold mb-4 gradient-text"
                 >
@@ -126,7 +145,11 @@ export default function ProjectsSection() {
 
                 <motion.p
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, x: 0 }
+                      : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
+                  }
                   transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
                   className="text-gray-300 mb-6"
                 >
@@ -135,7 +158,11 @@ export default function ProjectsSection() {
 
                 <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, x: 0 }
+                      : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
+                  }
                   transition={{ duration: 0.8, delay: index * 0.2 + 0.4 }}
                   className="flex flex-wrap gap-2 mb-8"
                 >
@@ -157,7 +184,11 @@ export default function ProjectsSection() {
 
                 <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, x: 0 }
+                      : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
+                  }
                   transition={{ duration: 0.8, delay: index * 0.2 + 0.5 }}
                 >
                   <a
@@ -177,5 +208,5 @@ export default function ProjectsSection() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
