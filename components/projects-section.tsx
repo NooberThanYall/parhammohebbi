@@ -14,20 +14,20 @@ const projects = [
     tags: ["Node.js", "Express", "MongoDB", "NextJS"],
   },
   {
+    id: 2,
+    title: "Full Stack Ecommerce & Blog",
+    description:
+    "An Ecommerce with a blog, having an admin panel as a CMS to control the content of the website",
+    image: "/images/Screenshot (185).png",
+    tags: ["Next.js", "React", "Node.js", "PostgreSQL"],
+  },
+  {
     id: 1,
     title: "FullStack Todo App – Auth & API",
     description:
       "Todo App with Authentication (JWT) That Stores The Tasks And User Settings To The Database. You can Also Create Routines so You dont have to Overwrite Your Tasks Each Day.",
     image: "/images/Screenshot (98).png",
     tags: ["Next.js", "React", "Node.js", "MongoDB"],
-  },
-  {
-    id: 2,
-    title: "Full Stack Ecommerce & Blog",
-    description:
-      "An Ecommerce with a blog, having an admin panel as a CMS to control the content of the website",
-    image: "/images/Screenshot (185).png",
-    tags: ["Next.js", "React", "Node.js", "PostgreSQL"],
   },
 ];
 
