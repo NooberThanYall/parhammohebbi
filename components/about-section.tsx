@@ -40,8 +40,7 @@ export default function AboutSection() {
         </motion.h2>
 
         <motion.p variants={itemVariants} className="text-gray-300 text-lg mb-12 leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat tenetur in nemo nam mollitia, vel id
-          velit. Quo possimus voluptates beatae suscipit consequuntur atque ratione asperiores voluptatem nisi non?
+          Web developer with over 3 years of experience in designing and implementing modern websites. My main expertise is working with JavaScript, React, and Next.js, and I value clean and functional user interface design. During this time, I have worked on various projects, ranging from personal tools to online stores
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4">
