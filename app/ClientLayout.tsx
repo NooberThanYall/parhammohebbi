@@ -13,6 +13,8 @@ export default function ClientLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  console.log('DO NOT MESS WITH ME NIGGA!')
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#0e1016] text-white`}>
